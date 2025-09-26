@@ -29,6 +29,8 @@ void main() {
     await tester.tap(find.text('='));
     await tester.pumpAndSettle();
 
+    // Should show result labeled line and current input as 3
+    expect(find.text('= 3'), findsWidgets);
     expect(find.text('3'), findsWidgets);
   });
 }
